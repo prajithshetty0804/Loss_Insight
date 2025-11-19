@@ -1,6 +1,6 @@
 from django.urls import path
-from .views import LossSummaryView
+from .views import WeeklyLossAPIView
 
 urlpatterns = [
-    path('loss-summary/', LossSummaryView.as_view()),
+    path('weekly-loss/', WeeklyLossAPIView.as_view(), name='weekly-loss'),
 ]
