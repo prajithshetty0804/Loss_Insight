@@ -5,5 +5,8 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: echo "Sample CI build pipeline"
+- script: pip install -r requirements.txt
+  displayName: "Install Dependencies"
+
+- script: echo "Running CI Checks"
   displayName: "Run CI Task"
