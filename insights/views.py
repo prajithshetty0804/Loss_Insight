@@ -1,10 +1,5 @@
-from rest_framework.views import APIView
-from rest_framework.response import Response
-from .models import PlantLoss
-from .serializers import PlantLossSerializer
-
-class LossSummaryView(APIView):
+class WeeklyLossAPIView(APIView):
     def get(self, request):
-        queryset = PlantLoss.objects.all()
-        serializer = PlantLossSerializer(queryset, many=True)
-        return Response({'loss_summary': serializer.data})
+        records = WeeklyLossRecord.objects.all()
+        serializer = WeeklyLossSerializer(records, many=True)
+        return Response({"weekly_loss_data": serializer.data})
