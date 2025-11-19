@@ -47,4 +47,5 @@ python manage.py runserver
 ```
 
 ## API Endpoint
-GET `/api/loss-summary/`
+GET /api/v1/weekly-loss/
+
