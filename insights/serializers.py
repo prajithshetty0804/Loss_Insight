@@ -1,7 +1,6 @@
-from rest_framework import serializers
-from .models import PlantLoss
+from .models import WeeklyLossRecord
 
-class PlantLossSerializer(serializers.ModelSerializer):
+class WeeklyLossSerializer(serializers.ModelSerializer):
     class Meta:
-        model = PlantLoss
+        model = WeeklyLossRecord
         fields = '__all__'
